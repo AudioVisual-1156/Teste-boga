@@ -2,7 +2,7 @@ const container = document.querySelector(".container");
 
 async function searchData() {
   const busca = await fetch(
-    "https://raw.githubusercontent.com/FelipeSponge/DadosReserva/refs/heads/main/db.json",
+    "https://raw.githubusercontent.com/AudioVisual-1156/API-TESTE/refs/heads/main/db.json",
   );
   const dados = await busca.json();
 
