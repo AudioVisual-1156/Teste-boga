@@ -1,0 +1,151 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0 10px 40px 10px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  color: #00008b;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.search-container {
+  margin: 20px auto;
+  width: 70%;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.bloco-container {
+  width: 75%;
+  margin: 10px auto;
+  text-align: left;
+}
+
+.bloco-header {
+  color: #00008b;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding: 15px;
+  background-color: #e7e7ff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bloco-header:hover {
+  background-color: #d8d8ff;
+}
+
+.bloco-header::after {
+  content: "\002B";
+  font-size: 20px;
+  font-weight: bold;
+  color: #00008b;
+  transition: transform 0.2s;
+}
+
+.bloco-header.active::after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+/* Ajuste Técnico: Permite expansão total sem cortes */
+.content.show {
+  max-height: none;
+}
+
+.table-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: #00008b;
+  color: white;
+  text-align: left;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* Colunas em AZUL e NEGRITO conforme solicitado */
+td {
+  background-color: white;
+  color: #00008b;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+td:nth-child(1) {
+  width: 120px;
+  white-space: nowrap;
+}
+
+td:nth-child(2) {
+  width: 200px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #e0e0ff;
+}
+
+@media screen and (max-width: 768px) {
+  .bloco-container,
+  .search-container {
+    width: 98%;
+  }
+  td,
+  th {
+    padding: 8px;
+    font-size: 12px;
+  }
+  td:nth-child(1) {
+    width: 90px;
+  }
+}
